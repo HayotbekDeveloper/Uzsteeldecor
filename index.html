@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+
+    <!-- scroll-top -->
+    <div class="scroll-to-top hide">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <!-- header-starting -->
+    <header>
+        <div class="header_top">
+            <div class="container">
+                <div class="header_itmes">
+                    <a href="#!" class="logo">SteelDecor</a>
+                    <div class="elements">
+                        <div class="location">
+                            <span class="locate_factory">Расположение завода</span>
+                            <div class="location_title">
+                                <p class="city">Андижан</p>
+                                <p class="street">ул. Предпортовая 6, к 14</p>
+                            </div>
+                        </div>
+                        <div class="worktime">
+                            <p class="time">Время работы</p>
+                            <p class="date">Пн.- Пт., 09:00—18:00</p>
+                        </div>
+                        <div class="phone">
+                            <a href="#!">8 (800) 600-17-86</a>
+                        </div>
+                    </div>
+                    <div class="burger_menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="navbarUl">
+                    <li class="ulEl">
+                        <a href="#!">Главное</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#product">Продукция</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#techno">Технология</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#contact">Контакты</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ru" viewBox="0 0 512 512">
+                                <g fill-rule="evenodd" stroke-width="1pt">
+                                    <path fill="#fff" d="M0 0h512v512H0z" />
+                                    <path fill="#0039a6" d="M0 170.7h512V512H0z" />
+                                    <path fill="#d52b1e" d="M0 341.3h512V512H0z" />
+                                </g>
+                            </svg>
+                            RU
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 512 512">
+                                        <g fill-rule="evenodd">
+                                            <g stroke-width="1pt">
+                                                <path fill="#bd3d44"
+                                                    d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V512H0z" />
+                                                <path fill="#fff"
+                                                    d="M0 39.4h972.8v39.4H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V315H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0z" />
+                                            </g>
+                                            <path fill="#192f5d" d="M0 0h389.1v275.7H0z" />
+                                            <path fill="#fff"
+                                                d="m32.3 11.8 4 11h11l-9.1 6.7 3.5 10.7-9.4-6.7-8.7 6.7 3.6-10.7-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.7-9.9-6.7-9 6.7 3.5-10.7-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.6L65 61l-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.8zM32.7 67l3.1 11h11.9l-9.5 6.7 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6L212 78h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6L277 78h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4zm-292 27.5 3.6 11H80l-9.5 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.6h11.4zm64.7 0 4 11h11l-9.1 6.7L139 123l-9.4-6.7-9 6.7 3.5-10.7-9.5-6.6h11.8zm65 0 3.5 11h11.4l-9 6.7L204 123l-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.6H191zm65 0 3.5 11h11.4l-9.4 6.7L269 123l-9.5-6.7-9.4 6.7 4-10.7-9.5-6.6H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.6h11.8zM32.7 122.1l3.1 11h11.9l-9.5 6.7 3.5 10.7-9.4-6.7-8.7 6.7 3.6-10.7-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.4-6.7-9 6.7 3.5-10.7-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7L139 178l-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7L204 178l-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7L269 178l-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.8zM32.7 177.2l3.1 11h11.9l-9.5 6.8 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.8 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.8 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.8 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.8 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.8 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7 3.5 10.7-9.4-6.7-9 6.7 3.5-10.7-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.7h11.8zM32.7 232.4l3.1 11h11.9l-9.5 6.7 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4z" />
+                                        </g>
+                                    </svg>
+                                    ENG
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        id="flag-icons-uz" viewBox="0 0 512 512">
+                                        <path fill="#1eb53a" d="M0 341.3h512V512H0z" />
+                                        <path fill="#0099b5" d="M0 0h512v170.7H0z" />
+                                        <path fill="#ce1126" d="M0 163.8h512v184.4H0z" />
+                                        <path fill="#fff" d="M0 174h512v164H0z" />
+                                        <circle cx="143.4" cy="81.9" r="61.4" fill="#fff" />
+                                        <circle cx="163.8" cy="81.9" r="61.4" fill="#0099b5" />
+                                        <g fill="#fff" transform="translate(278.5 131) scale(2.048)">
+                                            <g id="e">
+                                                <g id="d">
+                                                    <g id="c">
+                                                        <g id="b">
+                                                            <path id="a" d="M0-6-1.9-.3 1 .7" />
+                                                            <use xlink:href="#a" width="100%" height="100%"
+                                                                transform="scale(-1 1)" />
+                                                        </g>
+                                                        <use xlink:href="#b" width="100%" height="100%"
+                                                            transform="rotate(72)" />
+                                                    </g>
+                                                    <use xlink:href="#b" width="100%" height="100%"
+                                                        transform="rotate(-72)" />
+                                                    <use xlink:href="#c" width="100%" height="100%"
+                                                        transform="rotate(144)" />
+                                                </g>
+                                                <use xlink:href="#d" width="100%" height="100%" y="-24" />
+                                                <use xlink:href="#d" width="100%" height="100%" y="-48" />
+                                            </g>
+                                            <use xlink:href="#e" width="100%" height="100%" x="24" />
+                                            <use xlink:href="#e" width="100%" height="100%" x="48" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-48" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-24" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-24" y="-24" />
+                                        </g>
+                                    </svg>
+                                    UZ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav_mobile">
+            <div class="container">
+                <ul class="navbarUl">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ru" viewBox="0 0 512 512">
+                                <g fill-rule="evenodd" stroke-width="1pt">
+                                    <path fill="#fff" d="M0 0h512v512H0z" />
+                                    <path fill="#0039a6" d="M0 170.7h512V512H0z" />
+                                    <path fill="#d52b1e" d="M0 341.3h512V512H0z" />
+                                </g>
+                            </svg>
+                            RU
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 512 512">
+                                        <g fill-rule="evenodd">
+                                            <g stroke-width="1pt">
+                                                <path fill="#bd3d44"
+                                                    d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V512H0z" />
+                                                <path fill="#fff"
+                                                    d="M0 39.4h972.8v39.4H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V315H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0z" />
+                                            </g>
+                                            <path fill="#192f5d" d="M0 0h389.1v275.7H0z" />
+                                            <path fill="#fff"
+                                                d="m32.3 11.8 4 11h11l-9.1 6.7 3.5 10.7-9.4-6.7-8.7 6.7 3.6-10.7-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.7-9.9-6.7-9 6.7 3.5-10.7-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.6L65 61l-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.8zM32.7 67l3.1 11h11.9l-9.5 6.7 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6L212 78h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6L277 78h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4zm-292 27.5 3.6 11H80l-9.5 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.6h11.4zm64.7 0 4 11h11l-9.1 6.7L139 123l-9.4-6.7-9 6.7 3.5-10.7-9.5-6.6h11.8zm65 0 3.5 11h11.4l-9 6.7L204 123l-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.6H191zm65 0 3.5 11h11.4l-9.4 6.7L269 123l-9.5-6.7-9.4 6.7 4-10.7-9.5-6.6H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.6h11.8zM32.7 122.1l3.1 11h11.9l-9.5 6.7 3.5 10.7-9.4-6.7-8.7 6.7 3.6-10.7-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.4-6.7-9 6.7 3.5-10.7-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7L139 178l-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7L204 178l-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7L269 178l-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.8zM32.7 177.2l3.1 11h11.9l-9.5 6.8 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.8 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.8 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.8 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.8 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.8 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4zm-292 27.6 3.6 11H80l-9.5 6.7 4 10.7-9.5-6.7-9.5 6.7 4-10.7-9.5-6.7h11.4zm64.7 0 4 11h11l-9.1 6.7 3.5 10.7-9.4-6.7-9 6.7 3.5-10.7-9.5-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.7-9.4-6.7-9.1 6.7 3.5-10.7-9.4-6.7H191zm65 0 3.5 11h11.4l-9.4 6.7 3.9 10.7-9.5-6.7-9.4 6.7 4-10.7-9.5-6.7H256zm64.5 0 4 11h10.6l-9 6.7 3.5 10.7-9.5-6.7-9 6.7 3.5-10.7-9.4-6.7h11.8zM32.7 232.4l3.1 11h11.9l-9.5 6.7 3.5 10.6-9.4-6.7-8.7 6.7 3.6-10.6-9.5-6.7h11.8zm64.6 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.4-6.7-9 6.7 3.5-10.6-9.5-6.7h11.4zm65 0 3.5 11h11.4l-9.4 6.7 4 10.6-9.5-6.7-9.5 6.7 4-10.6-9.5-6.7h11.4zm64.6 0 3.9 11h11l-9 6.7 3.5 10.6-9.4-6.7-9.1 6.7 3.5-10.6-9.4-6.7h11.8zm65 0 3.5 11h11.4l-9 6.7 3.5 10.6-9.5-6.7-9 6.7 3.5-10.6-9.4-6.7h11.4zm65 0 3.5 11h11.4l-9.5 6.7 4 10.6-9.5-6.7-9.4 6.7 4-10.6-9.5-6.7h11.4z" />
+                                        </g>
+                                    </svg>
+                                    ENG
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        id="flag-icons-uz" viewBox="0 0 512 512">
+                                        <path fill="#1eb53a" d="M0 341.3h512V512H0z" />
+                                        <path fill="#0099b5" d="M0 0h512v170.7H0z" />
+                                        <path fill="#ce1126" d="M0 163.8h512v184.4H0z" />
+                                        <path fill="#fff" d="M0 174h512v164H0z" />
+                                        <circle cx="143.4" cy="81.9" r="61.4" fill="#fff" />
+                                        <circle cx="163.8" cy="81.9" r="61.4" fill="#0099b5" />
+                                        <g fill="#fff" transform="translate(278.5 131) scale(2.048)">
+                                            <g id="e">
+                                                <g id="d">
+                                                    <g id="c">
+                                                        <g id="b">
+                                                            <path id="a" d="M0-6-1.9-.3 1 .7" />
+                                                            <use xlink:href="#a" width="100%" height="100%"
+                                                                transform="scale(-1 1)" />
+                                                        </g>
+                                                        <use xlink:href="#b" width="100%" height="100%"
+                                                            transform="rotate(72)" />
+                                                    </g>
+                                                    <use xlink:href="#b" width="100%" height="100%"
+                                                        transform="rotate(-72)" />
+                                                    <use xlink:href="#c" width="100%" height="100%"
+                                                        transform="rotate(144)" />
+                                                </g>
+                                                <use xlink:href="#d" width="100%" height="100%" y="-24" />
+                                                <use xlink:href="#d" width="100%" height="100%" y="-48" />
+                                            </g>
+                                            <use xlink:href="#e" width="100%" height="100%" x="24" />
+                                            <use xlink:href="#e" width="100%" height="100%" x="48" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-48" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-24" />
+                                            <use xlink:href="#d" width="100%" height="100%" x="-24" y="-24" />
+                                        </g>
+                                    </svg>
+                                    UZ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="ulEl">
+                        <a href="#!">Главное</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#product">Продукция</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#techno">Технология</a>
+                    </li>
+                    <li class="ulEl">
+                        <a href="#contact">Контакты</a>
+                    </li>
+                    <div class="phone">
+                        <a href="#!">8 (800) 600-17-86</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header_title">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row flex-xl-row flex-md-column-reverse flex-sm-column-reverse flex-column-reverse align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="left">
+                                        <h1>Производство композитной арматуры,
+                                            сетки и армирующих элементов
+                                        </h1>
+                                        <div class="catalog">
+                                            <div class="specios">
+                                                <p>Специальное предложение</p>
+                                            </div>
+                                            <h4>Композитная сетка стеклопластиковая и базальтовая</h4>
+                                            <div class="options">
+                                                <svg width="25" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="11.9565" cy="11.5" r="10" stroke="#8A8A8A"
+                                                        stroke-width="2" />
+                                                    <line x1="23.6484" y1="1.22199" x2="0.691927" y2="23.222"
+                                                        stroke="#8A8A8A" stroke-width="2" />
+                                                </svg>
+                                                <p>от 2мм / 50х50</p>
+                                                <a href="#!" class="catalogs">Перейти в каталог</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="right">
+                                        <img src="./img/иллюстрация.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row flex-xl-row flex-md-column-reverse flex-sm-column-reverse flex-column-reverse align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="left">
+                                        <h1>Производство композитной арматуры,
+                                            сетки и армирующих элементов
+                                        </h1>
+                                        <div class="catalog">
+                                            <div class="specios">
+                                                <p>Специальное предложение</p>
+                                            </div>
+                                            <h4>Композитная сетка стеклопластиковая и базальтовая</h4>
+                                            <div class="options">
+                                                <svg width="25" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="11.9565" cy="11.5" r="10" stroke="#8A8A8A"
+                                                        stroke-width="2" />
+                                                    <line x1="23.6484" y1="1.22199" x2="0.691927" y2="23.222"
+                                                        stroke="#8A8A8A" stroke-width="2" />
+                                                </svg>
+                                                <p>от 2мм / 50х50</p>
+                                                <a href="#!" class="catalogs">Перейти в каталог</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="right">
+                                        <img src="./img/иллюстрация.png" alt="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row flex-xl-row flex-md-column-reverse flex-sm-column-reverse flex-column-reverse align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="left">
+                                        <h1>Производство композитной арматуры,
+                                            сетки и армирующих элементов
+                                        </h1>
+                                        <div class="catalog">
+                                            <div class="specios">
+                                                <p>Специальное предложение</p>
+                                            </div>
+                                            <h4>Композитная сетка стеклопластиковая и базальтовая</h4>
+                                            <div class="options">
+                                                <svg width="25" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="11.9565" cy="11.5" r="10" stroke="#8A8A8A"
+                                                        stroke-width="2" />
+                                                    <line x1="23.6484" y1="1.22199" x2="0.691927" y2="23.222"
+                                                        stroke="#8A8A8A" stroke-width="2" />
+                                                </svg>
+                                                <p>от 2мм / 50х50</p>
+                                                <a href="#!" class="catalogs">Перейти в каталог</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="right">
+                                        <img src="./img/иллюстрация.png" alt="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper_Bottom">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- section-starting -->
+    <section>
+        <div class="ourProducts">
+            <div class="container">
+                <h1>Наша продукция</h1>
+                <div class="row justify-content-sm-center mt-35">
+                    <div class="col-lg-3 col-md-4 col-sm-7">
+                        <div class="box">
+                            <div class="left">
+                                <h3>Композитная
+                                    арматура</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории..png" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="left">
+                                <h3>Гидро-
+                                    изаляционные
+                                    смеси</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории.-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-7">
+                        <div class="box">
+                            <div class="left">
+                                <h3>Композитная
+                                    и базальтовая
+                                    сетка</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории.-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="left">
+                                <h3>Фиксаторы
+                                    арматуры</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории.-5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-7">
+                        <div class="box">
+                            <div class="left">
+                                <h3>Гнутые
+                                    композитные
+                                    элементы</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории.-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="left">
+                                <h3>Композитные
+                                    профильные
+                                    изделия</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./img/иллюстр. категории.-6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cataloge" id="product">
+            <div class="container">
+                <nav>
+                    <div class="items">
+                        <div class="item active" data-name="shtampovka">Штамповка</div>
+                        <div class="item" data-name="kovirniy">Ковирный</div>
+                    </div>
+                </nav>
+                <div class="row justify-content-xl-center justify-content-center gallery-cataloge">
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh1.jpg" alt="shtampovka">
+                            <img src="./img/Shtampovka/sh2.jpg" alt="shtampovka">
+                            <img src="./img/Shtampovka/sh3.jpg" alt="shtampovka">
+
+                            <img src="./img/Shtampovka/sh10.jpg" alt="shtampovka">
+                            <img src="./img/Shtampovka/sh11.jpg" alt="shtampovka">
+                            <img src="./img/Shtampovka/sh12.jpg" alt="shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh4.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh5.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh6.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh13.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh14.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh15.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh7.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh8.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh9.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh16.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh17.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh18.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh19.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh20.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh21.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh28.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh29.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh30.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh22.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh23.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh24.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh31.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh32.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh33.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh25.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh26.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh27.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh34.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh35.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh39.jpg" alt="Shtampovka">
+
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh40.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh41.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh42.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh49.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh50.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh52.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh43.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh44.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh45.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh53.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh54.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh55.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh46.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh36.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh51.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <div class="gallery" data-name="shtampovka">
+                        <div class="image">
+                            <img src="./img/Shtampovka/sh47.jpg" alt="Shtampovka">
+                            <img src="./img/Shtampovka/sh48.jpg" alt="Shtampovka">
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko30.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko40.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko101.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko108.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko109.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko110.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko102.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko103.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko104.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko111.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko112.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko113.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko105.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko106.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko107.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko114.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko115.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko116.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko118.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko119.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko120.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko127.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko128.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko129.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko121.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko122.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko123.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko130.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko131.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko132.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko124.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko125.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko126.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko133.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko134.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko135.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko136.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko137.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko138.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko145.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko146.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko147.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko139.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko140.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko141.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko148.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko149.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko150.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko142.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko143.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko144.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko151.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko152.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko153.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko154.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko155.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko156.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko163.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko164.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko165.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko157.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko158.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko159.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko166.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko167.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko168.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko160.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko161.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko162.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko169.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko170.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko171.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko172.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko173.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko174.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko181.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko182.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko183.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko175.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko176.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko177.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko184.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko185.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko186.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko178.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko179.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko180.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko187.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko200.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko201.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko202.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko205.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko206.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko213.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko214.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko215.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko207.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko208.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko209.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko216.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko217.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko224.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko210.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko211.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko212.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko225.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko226.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko227.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko228.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko229.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko230.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko238.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko239.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko240.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko231.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko232.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko234.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko241.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko242.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko243.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko235.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko236.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko237.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko244.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko245.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko246.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko247.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko248.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko249.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko256.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko257.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko258.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko250.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko251.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko252.jpg" alt="Kovirniy">
+
+                            <img src="./img/Kovirniy/ko259.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko260.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko261.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                    <div class="gallery hide " data-name="kovirniy">
+                        <div class="image">
+                            <img src="./img/Kovirniy/ko253.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko254.jpg" alt="Kovirniy">
+                            <img src="./img/Kovirniy/ko255.jpg" alt="Kovirniy">
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-box">
+                    <div class="details">
+                        <span class="icon"><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                    <div class="image-box">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="techno" id="techno">
+            <h1>Технология</h1>
+            <img src="./img/видеоролик.png" alt="">
+            <div class="container">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, animi? Iusto quod magnam dolore
+                    atque quis aut dignissimos sequi tenetur.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, animi? Iusto quod magnam dolore atque quis aut dignissimos sequi tenetur.</p>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <h1>Технология</h1>
+            <img src="./img/видеоролик.png" alt="">
+            <div class="container">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, animi? Iusto quod magnam dolore
+                    atque quis aut dignissimos sequi tenetur.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, animi? Iusto quod magnam dolore atque quis aut dignissimos sequi tenetur.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
