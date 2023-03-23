@@ -50,6 +50,10 @@ body {
     color: #003663;
 }
 
+.nav_mobile{
+    display: none;
+}
+
 /* loader */
 
 .mask {
@@ -131,102 +135,19 @@ video {
     padding: 0;
 }
 
-/* navbar */
-
-.nav_mobile.active {
-    top: 0px;
-}
-
-.nav_mobile {
-    transition: .6s;
-    width: 100%;
-    background-color: #00569D;
-    display: flex;
-    padding: 35px 0px;
-    align-items: center;
-    position: relative;
-    top: -160px;
-    z-index: 1;
-}
-
-.nav_mobile .navbarUl {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav_mobile .dropdown {
-    display: inline-block;
-    margin-right: 30px;
-    position: relative;
-}
-
-.nav_mobile .dropdown .btn {
-    color: white;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-}
-
-.nav_mobile .dropdown .btn:focus {
-    box-shadow: none;
-}
-
-.nav_mobile .dropdown .dropdown-menu {
-    min-width: 7rem;
-    background-color: #00569D;
-    border: none;
-    border-radius: unset;
-    position: absolute !important;
-    transform: translate3d(-32px, 60px, 0px) !important;
-}
-
-.nav_mobile .dropdown .drpdown-menu li {
-    margin-right: 0 !important;
-    text-align: center !important;
-    margin-bottom: 5px;
-}
-
-.nav_mobile .dropdown .dropdown-menu .dropdown-item {
-    color: white;
-}
-
-.dropdown-item:hover {
-    background-color: #00366399;
-}
-
-.nav_mobile .navbarUl .ulEl {
-    display: inline-block;
-    margin-right: 30px;
-}
-
-.nav_mobile .navbarUl li:last-of-type {
-    margin-right: 0;
-}
-
-.nav_mobile .navbarUl li a {
-    color: white;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-}
-
-
-
-
 /* header_staering */
 header {
     width: 100%;
 }
 
 header .header_top {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: white;
     padding: 20px 0px;
-    position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 header .header_top .header_itmes {
@@ -312,7 +233,7 @@ header .header_top .burger_menu {
 }
 
 header .navbar {
-    padding-top: 0;
+    padding-top: 87px;
     padding-bottom: 0;
     border-bottom: 2px solid #EFEFEF;
 }
@@ -330,6 +251,10 @@ header .navbar .navbarUl .ulEl {
     transition: all 0.6s ease;
 }
 
+header .navbar .navbarUl .ulEl:last-of-type {
+    border-right: 2px solid #EFEFEF;
+}
+
 header .navbar .navbarUl .ulEl a {
     text-transform: uppercase;
     font-weight: 500;
@@ -340,42 +265,6 @@ header .navbar .navbarUl .ulEl a {
 
 header .navbar .navbarUl .ulEl:hover {
     background-color: #00569D !important;
-}
-
-header .navbar .navbarUl .dropdown {
-    cursor: pointer;
-    padding: 20px 67px;
-    border-left: 2px solid #EFEFEF;
-    border-right: 2px solid #EFEFEF;
-    transition: all 0.6s ease;
-    background-color: transparent;
-}
-
-header .navbar .navbarUl .dropdown .btn {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: white;
-}
-
-header .navbar .navbarUl .dropdown .btn:focus {
-    box-shadow: none;
-}
-
-header .navbar .navbarUl .dropdown .dropdown-menu {
-    min-width: 12rem;
-    background-color: #00569D;
-    border: none;
-    border-radius: unset;
-}
-
-header .navbar .navbarUl .dropdown .dropdown-menu .dropdown-item {
-    color: white;
-}
-
-.dropdown-item:hover {
-    background-color: #00366399;
 }
 
 
@@ -522,26 +411,7 @@ header .header_title .swiper_Bottom .swiper-pagination span {
 section {
     width: 100%;
     background-color: white;
-    padding-top: 20px;
     text-align: center;
-}
-
-section .box {
-    max-width: 298px;
-    height: 160px;
-    background-color: #EFEFEF;
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-section .box .left h3 {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
-    text-align: left;
-    padding-left: 20px;
 }
 
 section .cataloge {
@@ -723,36 +593,30 @@ section .contact p {
 
 /* md 991px --- 768px*/
 
-@media (max-width: 991px) {
-    header .header_top .header_itmes .elements .location {
-        display: none;
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1296px;
+    }
+}
+
+@media (max-width: 992px) {
+    header .header_top .elements .location {
+        margin-right: 0;
     }
 
-    header .header_top .header_itmes .elements .worktime {
-        display: none;
+    header .header_top .elements .location .location_title .city {
+        margin-right: 5px;
     }
 
-    header .navbar {
-        display: none;
+    header .header_top .elements .worktime {
+        margin-right: 0;
     }
-
-    header .header_top .header_itmes .burger_menu {
-        width: 45px;
-        height: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #003663;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        color: #fff;
-    }
-
-    header .header_top .header_itmes .burger_menu i {
-        font-size: 25px;
-    }
-
 
     .swiper-button-prev {
         left: 40%;
@@ -764,58 +628,164 @@ section .contact p {
         left: 60%;
     }
 
-    section .cataloge{
+    section .cataloge {
         padding: 20px 0px;
     }
 
 }
-    /* sm 767px --- 576*/
+
+/* sm 767px --- 576*/
 
 @media (max-width: 768px) {
-    header .header_title .right img{
+
+    body.lock{
+        overflow: hidden;
+    }
+
+    header .header_top .elements {
+        display: none;
+    }
+
+    header .header_top .burger_menu {
+        display: block;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    .burger_menu {
+        width: 30px;
+        height: 20px;
+        display: block;
+        position: relative;
+    }
+
+    .burger_menu span {
+        position: absolute;
+        background-color: #003663;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger_menu::before,
+    .burger_menu::after {
+        content: '';
+        background-color: #003663;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger_menu::before {
+        top: 0;
+    }
+
+    .burger_menu::after {
+        bottom: 0;
+    }
+
+    .burger_menu.active::before{
+        transform: rotate(45deg);
+        top: 8px;
+    }
+
+    .burger_menu.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .burger_menu.active span{
+        transform: scale(0);
+    }
+
+    /* navbar */
+
+    .nav_mobile.active {
+        top: 0;
+    }
+
+    .nav_mobile {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #00569D;
+        display: flex;
+        padding: 35px 0px;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .nav_mobile .navbarUl {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav_mobile .navbarUl .ulEl {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    header .phone a {
+        padding: 12px 20px;
+        background-color: #FFCD00;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+    }
+
+    .nav_mobile .navbarUl li a {
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    header .header_title {
+        padding-top: 87px;
+    }
+
+    header .header_title .right img {
         max-width: 80%;
     }
 
-    header .header_title .left h1{
+    header .header_title .left h1 {
         font-size: 26px;
         line-height: 30px;
         margin-bottom: 65px;
     }
 
-    section .cataloge .gallery{
+    section .cataloge .gallery {
         width: 360px;
     }
 }
+
 /* col 575px --- 320px */
 
 @media (max-width: 576px) {
-    header{
-        margin-bottom: 250px;
-    }
 
-    header .header_top .elements .phone a{
-        display: none;
-    }
-
-    .nav_mobile{
-        top: -370px;
-    }
-    .nav_mobile .navbarUl{
+    .nav_mobile .navbarUl {
         flex-direction: column;
         text-align: center;
     }
 
-    .nav_mobile .dropdown{
+    .nav_mobile .navbarUl .ulEl {
         margin-right: 0;
         margin-bottom: 30px;
     }
 
-    .nav_mobile .navbarUl .ulEl{
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .nav_mobile .navbarUl .phone a{
+    .nav_mobile .navbarUl .phone a {
         padding: 12px 20px;
         background-color: #FFCD00;
         font-weight: 400;
@@ -824,45 +794,37 @@ section .contact p {
         color: #000000;
     }
 
-    header .header_title{
-        width: 100%;
-        position: absolute;
-        top: 100px;
-        z-index: 0;
-        left: 0;
-    }
-
-    header .header_title .left h1{
+    header .header_title .left h1 {
         font-size: 20px;
         line-height: 20px;
     }
 
-    header .header_title .left .catalog{
+    header .header_title .left .catalog {
         padding: 20px 20px;
     }
 
-    header .header_title .left .catalog .specios{
+    header .header_title .left .catalog .specios {
         top: -13%;
         left: 10px;
         padding: 10px 10px;
     }
 
-    header .header_title .left .catalog .specios p{
+    header .header_title .left .catalog .specios p {
         font-size: 13px;
         line-height: 25px;
 
     }
 
-    header .header_title .left .catalog h4{
+    header .header_title .left .catalog h4 {
         line-height: 22px;
     }
 
-    header .header_title .left .catalog .options p{
+    header .header_title .left .catalog .options p {
         font-size: 15px;
         line-height: 15px;
     }
 
-    header .header_title .left .catalog .options a{
+    header .header_title .left .catalog .options a {
         padding: 10px 10px;
         font-size: 10px;
     }
@@ -877,11 +839,11 @@ section .contact p {
         left: 75%;
     }
 
-    section .cataloge nav .items .item{
+    section .cataloge nav .items .item {
         padding: 20px 30px;
     }
 
-    section .cataloge .gallery .image img{
+    section .cataloge .gallery .image img {
         width: calc(123% / 4);
     }
 

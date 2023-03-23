@@ -102,16 +102,16 @@ window.addEventListener('load', function (e) {
         var scroll = $(this).scrollTop()
 
         if (scroll >= 50) {
-            $('.header_top').addClass('sticy')
             $('.scroll-to-top').removeClass('hide')
         } else {
-            $('.header_top').removeClass('sticy')
             $('.scroll-to-top').addClass('hide')
         }
     })
 
     $('.burger_menu').on('click', function () {
         $('.nav_mobile').toggleClass('active')
+        $('.burger_menu').toggleClass('active')
+        $('body').toggleClass('lock')
     })
 
 });
