@@ -271,139 +271,24 @@ header .navbar .navbarUl .ulEl:hover {
 
 header .header_title {
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-header .header_title .left h1 {
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 48px;
-    color: #FFFFFF;
-    margin-bottom: 70px;
+.leFadeIn span { animation-name: leFadeIn }
+@keyframes leFadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
 }
 
-header .header_title .left .catalog {
-    position: relative;
-    padding: 30px 30px;
-    background-color: #FFFFFF;
-    border: 1.5px solid #FFFFFF;
+header .header_title div{
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFCD00;
+    text-align: justify;
 }
 
-header .header_title .left .catalog .specios {
-    position: absolute;
-    padding: 20px 20px;
-    background-color: #00569D;
-    color: white;
-    top: -26%;
-}
-
-header .header_title .left .catalog .specios p {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 48px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
-header .header_title .left .catalog h4 {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-header .header_title .left .catalog .options {
-    display: flex;
-    align-items: center;
-}
-
-header .header_title .left .catalog .options p {
-    margin-left: 10px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #8A8A8A;
-    margin-right: 30px;
-}
-
-header .header_title .left .catalog .options a {
-    padding: 15px 20px;
-    background-color: #FFCD00;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-}
-
-header .header_title .right img {
-    max-width: 100%;
-}
-
-header .header_title .swiper_Bottom {
-    position: relative;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 35px;
-}
-
-.swiper-button-next {
-    color: white;
-    --swiper-navigation-size: 15px;
-    transform: translate(-50%);
-    left: 55%;
-}
-
-.swiper-button-prev {
-    color: white;
-    --swiper-navigation-size: 15px;
-    left: 44%;
-    transform: translateX(-44%);
-}
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
-}
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-    bottom: 3px;
-}
-
-.swiper-pagination-bullet {
-    opacity: 100%;
-}
-
-header .header_title .swiper_Bottom .swiper-pagination span {
-    width: 12px;
-    height: 12px;
-    background-color: white;
-}
-
-.swiper-pagination-bullet-active {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    background-color: white;
-}
-
-.swiper-pagination-bullet-active::after {
-    width: 22px;
-    height: 22px;
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.cssanimation, .cssanimation span{
+    animation-duration: 0.09s;
 }
 
 /* header-end */
@@ -840,6 +725,10 @@ section .contact p {
         font-size: 18px;
         line-height: 22px;
         color: #000000;
+    }
+
+    header .header_title div{
+        font-size: 20px;
     }
 
     header .header_title .left h1 {
