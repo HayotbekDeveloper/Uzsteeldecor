@@ -50,7 +50,7 @@ body {
     color: #003663;
 }
 
-.nav_mobile{
+.nav_mobile {
     display: none;
 }
 
@@ -148,6 +148,7 @@ header .header_top {
     background-color: white;
     padding: 20px 0px;
     z-index: 3;
+    box-shadow: 1px 5px 10px 1px rgba(0, 54, 99, 0.3);
 }
 
 header .header_top .header_itmes {
@@ -532,20 +533,17 @@ section .shadow {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-section .techno,
 section .contact {
     width: 100%;
     padding: 30px 0px;
 }
 
-section .techno h1,
 section .contact h1 {
     color: #003663;
     font-size: 50px;
     margin-bottom: 20px;
 }
 
-section .techno p,
 section .contact p {
     font-weight: 600;
     font-size: 20px;
@@ -553,6 +551,46 @@ section .contact p {
     color: #003663;
     margin: 30px 0px;
 }
+
+.contact {
+    width: 100%;
+    background-color: #003663;
+    padding: 30px 0px;
+}
+
+.contact h1 {
+    color: #FFCD00 !important;
+}
+
+.contact .left {
+    border-right: 2px solid #FFCD00;
+}
+
+.contact .left,
+.contact .right {
+    width: 39%;
+    text-align: left;
+}
+
+.contact .left h3,
+.contact .right h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    /* display: inline-block; */
+}
+
+.contact h3 span,
+.contact h3 i,
+.contact .right h3 {
+    color: #FFCD00;
+}
+
+.contact h3 i {
+    margin-right: 5px;
+}
+
+
 
 /* section_end */
 
@@ -588,6 +626,12 @@ section .contact p {
 
     section .preview-box {
         max-width: 510px;
+    }
+
+    .contact .left,
+    .contact .right {
+        width: 50%;
+        text-align: left;
     }
 }
 
@@ -632,13 +676,17 @@ section .contact p {
         padding: 20px 0px;
     }
 
+    .contact .left h3, .contact .right h3{
+        font-size: 20px;
+    }
+
 }
 
 /* sm 767px --- 576*/
 
 @media (max-width: 768px) {
 
-    body.lock{
+    body.lock {
         overflow: hidden;
     }
 
@@ -690,17 +738,17 @@ section .contact p {
         bottom: 0;
     }
 
-    .burger_menu.active::before{
+    .burger_menu.active::before {
         transform: rotate(45deg);
         top: 8px;
     }
 
-    .burger_menu.active::after{
+    .burger_menu.active::after {
         transform: rotate(-45deg);
         bottom: 9px;
     }
 
-    .burger_menu.active span{
+    .burger_menu.active span {
         transform: scale(0);
     }
 
@@ -845,6 +893,10 @@ section .contact p {
 
     section .cataloge .gallery .image img {
         width: calc(123% / 4);
+    }
+
+    .contact .left h3, .contact .right h3{
+        font-size: 15px;
     }
 
 }
