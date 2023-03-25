@@ -170,56 +170,6 @@ header .header_top .elements {
     align-items: center;
 }
 
-header .header_top .elements .location {
-    margin-right: 100px;
-}
-
-header .header_top .elements .location .locate_factory {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #8A8A8A;
-    margin-bottom: 5px;
-}
-
-header .header_top .elements .location .location_title {
-    display: flex;
-}
-
-header .header_top .elements .location .location_title .city {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
-    margin-right: 60px;
-}
-
-header .header_top .elements .location .location_title .street {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-}
-
-header .header_top .elements .worktime {
-    margin: 0px 100px;
-}
-
-header .header_top .elements .worktime .time {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #8A8A8A;
-    margin-bottom: 5px;
-}
-
-header .header_top .elements .worktime .date {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-}
-
 header .header_top .elements .phone a {
     padding: 12px 20px;
     background-color: #FFCD00;
@@ -227,6 +177,19 @@ header .header_top .elements .phone a {
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+    margin-right: 30px;
+}
+
+.Mobimg{
+    display: none;
+}
+
+header .header_top .img{
+    max-width: 200px;
+}
+
+header .header_top .img img{
+    max-width: 100%;
 }
 
 header .header_top .burger_menu {
@@ -234,7 +197,7 @@ header .header_top .burger_menu {
 }
 
 header .navbar {
-    padding-top: 87px;
+    padding-top: 140px;
     padding-bottom: 0;
     border-bottom: 2px solid #EFEFEF;
 }
@@ -272,12 +235,6 @@ header .navbar .navbarUl .ulEl:hover {
 header .header_title {
     padding-top: 40px;
     padding-bottom: 40px;
-}
-
-.leFadeIn span { animation-name: leFadeIn }
-@keyframes leFadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
 }
 
 header .header_title div{
@@ -496,14 +453,6 @@ section .contact p {
 /* lg 1199px --- 992px*/
 
 @media (max-width: 1200px) {
-    header .header_top .elements .location {
-        margin-right: 40px;
-    }
-
-    header .header_top .elements .worktime {
-        margin: 0px;
-        margin-right: 40px;
-    }
 
     header .navbar .navbarUl .ulEl {
         padding: 20px 52px;
@@ -535,17 +484,6 @@ section .contact p {
 }
 
 @media (max-width: 992px) {
-    header .header_top .elements .location {
-        margin-right: 0;
-    }
-
-    header .header_top .elements .location .location_title .city {
-        margin-right: 5px;
-    }
-
-    header .header_top .elements .worktime {
-        margin-right: 0;
-    }
 
     .swiper-button-prev {
         left: 40%;
@@ -581,6 +519,16 @@ section .contact p {
 
     header .header_top .burger_menu {
         display: block;
+    }
+
+    .Msize{
+        display: flex;
+        align-items: center;
+    }
+
+    .Mobimg{
+        display: block;
+        max-width: 150px;
     }
 
     header .navbar {
