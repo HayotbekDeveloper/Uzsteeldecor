@@ -769,7 +769,7 @@ section .contact p {
     }
 
     section .cataloge .gallery .image{
-        justify-content: start;
+        justify-content: center;
     }
 
     .contact h3,
@@ -785,4 +785,10 @@ section .contact p {
         margin: 0 var(--swiper-pagination-bullet-horizontal-gap,3px);
     }
 
+}
+
+@media (max-width: 355px) {
+    section .cataloge .gallery .image{
+        justify-content: start;
+    }
 }
