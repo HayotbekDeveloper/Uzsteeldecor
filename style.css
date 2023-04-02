@@ -157,7 +157,7 @@ header .header_top {
     width: 100%;
     background-color: white;
     padding: 20px 0px;
-    z-index: 3;
+    z-index: 33333;
     box-shadow: 1px 5px 10px 1px rgba(0, 54, 99, 0.3);
 }
 
@@ -240,6 +240,23 @@ header .navbar .navbarUl .ulEl:hover {
     background-color: #00569D !important;
 }
 
+.ourworks{
+    padding-top: 20px;
+}
+
+.ourworks h1{
+    color: #FFCD00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ourworks .swiper{
+    display: block;
+}
+
+.ourworks .swiper2{
+    position: relative;
+}
 
 header .header_title {
     padding-top: 40px;
@@ -265,9 +282,6 @@ section {
     text-align: center;
 }
 
-section .ourworks .swiper2{
-    position: relative;
-}
 
 section .cataloge {
     width: 100%;
@@ -385,14 +399,6 @@ section .shadow {
     z-index: 2;
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-.ourworks{
-    padding: 20px 0px;
-}
-
-.ourworks .swiper{
-    display: block;
 }
 
 section .contact {
@@ -736,6 +742,10 @@ section .contact p {
         font-size: 18px;
         line-height: 22px;
         color: #000000;
+    }
+
+    header .header_title{
+        padding-top: 30px;
     }
 
     header .header_title div{
