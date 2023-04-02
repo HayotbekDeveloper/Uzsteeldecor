@@ -87,6 +87,11 @@ body {
 
 .hide {
     opacity: 0;
+    display: none !important;
+}
+
+.swiper{
+    display: none;
 }
 
 section h1 {
@@ -177,7 +182,6 @@ header .header_top .elements .phone a {
     font-size: 18px;
     line-height: 22px;
     color: #000000;
-    margin-right: 30px;
 }
 
 .Mobimg{
@@ -197,7 +201,7 @@ header .header_top .burger_menu {
 }
 
 header .navbar {
-    padding-top: 140px;
+    padding-top: 65px;
     padding-bottom: 0;
     border-bottom: 2px solid #EFEFEF;
 }
@@ -240,8 +244,7 @@ header .header_title {
 header .header_title div{
     font-size: 30px;
     font-weight: 700;
-    color: #FFCD00;
-    text-align: justify;
+    color: #fff;
 }
 
 .cssanimation, .cssanimation span{
@@ -400,26 +403,25 @@ section .contact p {
     padding: 30px 0px;
 }
 
+.contact .element{
+    max-width: 450px;
+    text-align: left;
+}
+
+.contact .element .user,
+.contact .element .contacts{
+    margin-bottom: 10px;
+}
+
 .contact h1 {
     color: #FFCD00 !important;
 }
 
-.contact .left {
-    border-right: 2px solid #FFCD00;
-}
-
-.contact .left,
-.contact .right {
-    width: 39%;
-    text-align: left;
-}
-
-.contact .left h3,
-.contact .right h3 {
+.contact h3{
     color: white;
     font-size: 25px;
     font-weight: 400;
-    /* display: inline-block; */
+    display: inline-block;
 }
 
 .contact h3 span,
@@ -485,15 +487,6 @@ section .contact p {
 
 @media (max-width: 992px) {
 
-    .swiper-button-prev {
-        left: 40%;
-        transform: translateX(-40%);
-    }
-
-    .swiper-button-next {
-        transform: translate(-60%);
-        left: 60%;
-    }
 
     section .cataloge {
         padding: 20px 0px;
@@ -509,6 +502,54 @@ section .contact p {
 
 @media (max-width: 768px) {
 
+    .dbnone{
+        display: none;
+    }
+
+    .swiper{
+        display: block;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        width: 50px;
+        height: 50px;
+        background-color: #00569D;
+        border-radius: 50%;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 23px;
+        color: #FFCD00;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 0px;
+    }
+
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        opacity: 100%;
+        background-color: #00569D;
+    }
+
+    .swiper-pagination-bullet-active{
+        transition: .4s;
+        background-color: #FFCD00;
+        width: 20px;
+        border-radius: 40%;
+    }
+
+    .swiper-pagination{
+       bottom: 0;
+    }
+
+    section .cataloge .gallery{
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     body.lock {
         overflow: hidden;
     }
@@ -521,9 +562,8 @@ section .contact p {
         display: block;
     }
 
-    .Msize{
-        display: flex;
-        align-items: center;
+    header .header_title div{
+        font-size: 22px;
     }
 
     .Mobimg{
@@ -712,16 +752,6 @@ section .contact p {
     header .header_title .left .catalog .options a {
         padding: 10px 10px;
         font-size: 10px;
-    }
-
-    .swiper-button-prev {
-        left: 30%;
-        transform: translateX(-30%);
-    }
-
-    .swiper-button-next {
-        transform: translate(-75%);
-        left: 75%;
     }
 
     section .cataloge nav .items .item {

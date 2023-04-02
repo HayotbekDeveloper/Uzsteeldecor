@@ -10,13 +10,15 @@ window.addEventListener('load', function (e) {
         },
         simulateTouch: false,
         loop: true,
-        autoplay: {
-            delay: 2000,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
         },
-        speed: 1000
+        autoHeight: true,
     });
     const filterItem = document.querySelector('.items');
     const filterImg = document.querySelectorAll('.gallery');
+    const filterimage = document.querySelectorAll('.imageSlide');
     const body = document.body;
 
     filterItem.onclick = (selectedItem) => {
@@ -34,6 +36,16 @@ window.addEventListener('load', function (e) {
                     gallery.classList.remove("show")
                 }
             });
+            filterimage.forEach((slider) => {
+                let filterImages = slider.getAttribute("data-name")
+                if ((filterImages == filterName)) {
+                    slider.classList.remove('hide')
+                    slider.classList.add('show')
+                } else {
+                    slider.classList.add('hide')
+                    slider.classList.remove('show')
+                }
+            })
         }
     }
 
