@@ -15,6 +15,10 @@ window.addEventListener('load', function (e) {
           crossFade: true
         },
         autoHeight: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
     });
     const filterItem = document.querySelector('.items');
     const filterImg = document.querySelectorAll('.gallery');

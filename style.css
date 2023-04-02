@@ -378,6 +378,14 @@ section .shadow {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.ourworks{
+    padding: 20px 0px;
+}
+
+.ourworks .swiper{
+    display: block;
+}
+
 section .contact {
     width: 100%;
     padding: 30px 0px;
