@@ -85,6 +85,10 @@ body {
     }
 }
 
+.scroll-hide{
+    opacity: 0;
+}
+
 .hide {
     opacity: 0;
     display: none !important;
@@ -260,7 +264,7 @@ section {
     text-align: center;
 }
 
-.swiper2{
+section .ourworks .swiper2{
     position: relative;
 }
 

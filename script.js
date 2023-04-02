@@ -1,4 +1,5 @@
 window.addEventListener('load', function (e) {
+    AOS.init();
     const swiper = new Swiper('.swiper', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -122,7 +123,7 @@ window.addEventListener('load', function (e) {
 
     let mask = document.querySelector('.mask');
 
-    mask.classList.add('hide');
+    mask.classList.add('scroll-hide');
     setTimeout(() => {
         mask.remove();
     }, 600)
