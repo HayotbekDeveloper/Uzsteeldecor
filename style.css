@@ -260,6 +260,10 @@ section {
     text-align: center;
 }
 
+.swiper2{
+    position: relative;
+}
+
 section .cataloge {
     width: 100%;
     background-color: white;

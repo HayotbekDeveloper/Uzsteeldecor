@@ -15,10 +15,27 @@ window.addEventListener('load', function (e) {
           crossFade: true
         },
         autoHeight: true,
+    });
+    const swiper2 = new Swiper('.swiper2', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        simulateTouch: false,
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoHeight: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false
-          },
+        },
     });
     const filterItem = document.querySelector('.items');
     const filterImg = document.querySelectorAll('.gallery');
